@@ -21,8 +21,6 @@ The application provides the following functionality:
 
 - Python 3
 - pip (Python package manager)
-- An internet connection for downloading images
-- A trained RT-DETR model file (`rtdtrwithaug1106.pt`) for object detection
 
 ### Setup
 
@@ -202,10 +200,3 @@ The application is intended for research and data validation purposes. Users are
 - A matching object detection does not necessarily prove that the original user classification is correct, as multiple objects may appear in one image.
 
 
-### Prerequisites
-
-- Python 3
-- pip (Python package manager)
-- An internet connection for downloading images
-
-The trained RT-DETR model (`rtdtrwithaug1106.pt`) is already included in the repository and does not need to be downloaded separately.
