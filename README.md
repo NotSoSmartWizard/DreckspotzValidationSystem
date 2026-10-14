@@ -261,3 +261,40 @@ The application is intended for research and data validation purposes. Users are
 - A matching object detection does not necessarily prove that the original user classification is correct, as multiple objects may appear in one image.
 
 
+## References & Acknowledgments
+
+### Framework
+
+- **[Ultralytics](https://github.com/ultralytics/ultralytics)**
+  - Framework used for training and evaluating YOLO and RT-DETR object detection models.
+
+### Training Datasets
+
+The model was trained using images from the following sources:
+
+- **GLOBAL 2000 – DreckSpotz**
+  - Primary source of training images, provided by GLOBAL 2000 through the DreckSpotz project.
+
+- **[TACO – Trash Annotations in Context](https://github.com/pedropro/TACO)**
+  - Proença, P. F., & Simões, P. (2020).
+  - Dataset containing annotated images of litter in various environments.
+
+- **[YOLOv7 Trash Dataset](https://universe.roboflow.com/technological-institute-of-the-philippines/yolov7-trash-05-04-2023)**
+  - Technological Institute of the Philippines (2023).
+
+- **[T-Shirt Dataset](https://universe.roboflow.com/ahs/tshirt-9i5fe)**
+  - AHS (2023).
+
+- **[Trousers Dataset](https://universe.roboflow.com/qiuyi-hu/trousers-model)**
+  - Qiuyi Hu (2023).
+
+- **[Towel Dataset](https://universe.roboflow.com/practicas-preprofesionales/towel-yp6ge)**
+  - PRACTICAS PREPROFESIONALES (2023).
+
+- **[Shoes Dataset](https://universe.roboflow.com/peter-yang-vhmt7/shoes-knud8)**
+  - Peter Yang (2023).
+
+### Data Annotation
+
+- **[MakeSense.ai](https://www.makesense.ai/)**
+  - Tool used for manually annotating training images and generating bounding boxes.

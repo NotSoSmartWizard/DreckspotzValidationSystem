@@ -1,8 +1,19 @@
-env/
-venv/
-.venv/
+# Private datasets
+app/data/
+app/testdata/
+
+# Generated logs
+app/logs/
+
+# Generated results
+app/output/
+
+# Python
 __pycache__/
 *.pyc
-.env
+env/
+.venv/
+
+# IDE settings
 .idea/
 .vscode/
