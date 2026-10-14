@@ -42,6 +42,67 @@ The application provides the following functionality:
    pip install -r requirements.txt
    ```
 
+
+### Download RT-DETR Model Weights (Git LFS)
+
+The application uses a pretrained RT-DETR model (`rtdtrwithaug1106.pt`) for object detection.
+
+Due to its size (approximately 135.5 MB), the model is stored using **Git Large File Storage (Git LFS)**.
+
+**Git LFS must be installed to download the actual model weights.**
+
+1. Install Git LFS from [https://git-lfs.com/](https://git-lfs.com/).
+
+2. Initialize Git LFS:
+
+   ```bash
+   git lfs install
+   ```
+
+3. Navigate to the repository root and download the model:
+
+   ```bash
+   git lfs pull
+   ```
+
+4. Verify that the model file was downloaded correctly.
+
+   The file `app/code/rtdtrwithaug1106.pt` should be approximately **135.5 MB**.
+
+   On Windows, you can check its size using PowerShell:
+
+   ```powershell
+   Get-Item .\app\code\rtdtrwithaug1106.pt | Select-Object Name, Length
+   ```
+
+5. Test whether the model loads successfully:
+
+   ```bash
+   cd app/code
+   python -c "from ultralytics import RTDETR; model = RTDETR('rtdtrwithaug1106.pt'); print('Model loaded successfully!')"
+   ```
+
+#### Troubleshooting: Invalid Load Key
+
+If the application displays the following error:
+
+```text
+invalid load key, 'v'
+```
+
+the `.pt` file is likely a Git LFS pointer rather than the actual trained model.
+
+To resolve this issue, navigate to the repository root and run:
+
+```bash
+git lfs pull
+```
+
+If the problem persists, verify that Git LFS is installed and that the model weights are available in the repository's Git LFS storage.
+
+**Note:** The application cannot perform object detection without the actual RT-DETR model weights.
+
+
 ## Dataset Requirements
 
 **The original Dreckspotz dataset is private and is not included in this repository.** No sample or test dataset containing real user submissions is provided.
